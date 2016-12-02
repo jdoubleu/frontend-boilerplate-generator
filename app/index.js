@@ -138,6 +138,13 @@ module.exports = generators.Base.extend({
 			this.destinationPath('gulpfile.js'),
 			tp
 		);
+
+		// .editorconfig
+		if(tp.editorconfig)
+			this.fs.copy(
+				this.templatePath('static/_.editorconfig'),
+				this.destinationPath('.editorconfig')
+			);
 	},
 
 	/*
