@@ -157,6 +157,14 @@ module.exports = generators.Base.extend({
 				this.templatePath('static/_.eslintrc'),
 				this.destinationPath('.eslintrc')
 			);
+
+		// .gitlab-ci.yml
+		if(tp.gitlabci)
+			this.fs.copyTpl(
+				this.templatePath('_.gitlab-ci.yml.ejs'),
+				this.destinationPath('.gitlab-ci.yml'),
+				tp
+			);
 	},
 
 	/*
