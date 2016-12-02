@@ -21,6 +21,69 @@ module.exports = generators.Base.extend({
 		generators.Base.apply(this, arguments);
 	},
 
+	/**
+	 * User Settings. Prompts the user to fill the data.
+	 * @returns {Promise.<TResult>}
+	 */
+	prompting: function() {
+		return this.prompt(
+			[
+				{
+					type: 'input',
+					name: 'name',
+					message: 'Project name',
+					default: process.cwd().split(path.sep).pop()
+				},
+				{
+					type: 'input',
+					name: 'desc',
+					message: 'description'
+				},
+				{
+					type: 'input',
+					name: 'author',
+					message: 'author'
+				},
+				{
+					type: 'input',
+					name: 'license',
+					message: 'license',
+					default: 'UNLICENSED'
+				},
+				{
+					type: 'confirm',
+					name: 'sasslinting',
+					message: 'Do you want to add sass linting tasks?',
+					default: true,
+					store: true
+				},
+				{
+					type: 'confirm',
+					name: 'es6linting',
+					message: 'Do you want to add es6 linting tasks?',
+					default: true,
+					store: true
+				},
+				{
+					type: 'confirm',
+					name: 'gitlabci',
+					message: 'Do you want to add a GitLab CI config?',
+					default: true,
+					store: true
+				},
+				{
+					type: 'confirm',
+					name: 'editorconfig',
+					message: 'Do you want to add an editorconfig?',
+					default: true,
+					store: true
+				}
+			]
+		).then((props) => {
+			this.props = props;
+		});
+	},
+
 	/*
 	 * ---------------------- Helper functions ----------------------
 	 */
