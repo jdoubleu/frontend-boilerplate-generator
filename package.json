@@ -1,6 +1,6 @@
 {
   "name": "generator-fbp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A yeoman generator for bootstrapping a project based on the frontend-boilerplate.",
   "main": "app/index.js",
   "scripts": {
