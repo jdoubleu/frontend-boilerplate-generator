@@ -171,6 +171,13 @@ module.exports = generators.Base.extend({
 			this.templatePath('static/_.gitignore'),
 			this.destinationPath('.gitignore')
 		);
+
+		// README.md
+		this.fs.copyTpl(
+			this.templatePath('_README.mds.ejs'),
+			this.destinationPath('README.md'),
+			tp
+		);
 	},
 
 	/*
