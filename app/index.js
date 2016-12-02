@@ -67,6 +67,9 @@ module.exports = generators.Base.extend({
 						if(!name || !name[1].trim() || !mail || !mail[1].trim())
 							return "Please provide a valid format (e.g. John Doe <mail@jd.com>)";
 
+						if(!this._getAuthorMail(input).includes('@'))
+							return "Please provide a valid email";
+
 						return true;
 					}
 				},
