@@ -2,7 +2,7 @@
   "name": "frontend-boilerplate-generator",
   "version": "1.0.0",
   "description": "A yeoman generator for bootstrapping a project based on the frontend-boilerplate.",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
