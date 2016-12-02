@@ -22,6 +22,21 @@ module.exports = generators.Base.extend({
 	},
 
 	/**
+	 * Intialization function.
+	 * Checks for dependencies, etc.
+	 * Prints out some information.
+	 */
+	initializing: function() {
+		this.log(
+			'Thank you for using the frontend-boilerplate yeoman generator.\n'
+			+ 'For more information checkout the generator\'s repository: https://gitlab.com/jdoubleu/frontend-boilerplate-generator'
+			+ '\n'
+			+ 'And the boilerplate: https://gitlab.com/jdoubleu/frontend-boilerplate'
+			+ '\n'
+		)
+	},
+
+	/**
 	 * User Settings. Prompts the user to fill the data.
 	 * @returns {Promise.<TResult>}
 	 */
@@ -192,6 +207,19 @@ module.exports = generators.Base.extend({
 		this.npmInstall();
 		// Install bower dependencies (this might be empty on first run)
 		this.bowerInstall();
+	},
+
+	/**
+	 * This function gets called last.
+	 * Print out some information
+	 */
+	end: function() {
+		this.log(
+			'Everything is up!\n'
+			+ 'You can run `npm start` or `gulp default` to watch for styles or scripts file changes and auto-compiling'
+			+ '\n\n'
+			+ 'Happy coding!'
+		);
 	},
 
 	/*
