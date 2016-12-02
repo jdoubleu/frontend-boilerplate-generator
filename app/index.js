@@ -195,8 +195,8 @@ module.exports = generators.Base.extend({
 		);
 
 		// theme's dist folders
-		this.fs.write('assets/dist/images/.gitkeep');
-		this.fs.write('assets/dist/fonts/.gitkeep');
+		this.fs.write('assets/dist/images/.gitkeep', '');
+		this.fs.write('assets/dist/fonts/.gitkeep', '');
 	},
 
 	/**
