@@ -98,6 +98,13 @@ module.exports = generators.Base.extend({
 			getAuthorMail: this._getAuthorMail,
 			uppercc: this._uppercc
 		};
+
+		// package.json
+		this.fs.copyTpl(
+			this.templatePath('_package.json'),
+			this.destinationPath('package.json'),
+			tp
+		);
 	},
 
 	/*
