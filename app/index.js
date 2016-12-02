@@ -215,7 +215,8 @@ module.exports = generators.Base.extend({
 	 */
 	end: function() {
 		this.log(
-			'Everything is up!\n'
+			'\n'
+			+ 'Everything is up!\n'
 			+ 'You can run `npm start` or `gulp default` to watch for styles or scripts file changes and auto-compiling'
 			+ '\n\n'
 			+ 'Happy coding!'
