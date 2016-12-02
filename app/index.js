@@ -146,14 +146,14 @@ module.exports = generators.Base.extend({
 
 		// package.json
 		this.fs.copyTpl(
-			this.templatePath('_package.json'),
+			this.templatePath('_package.json.ejs'),
 			this.destinationPath('package.json'),
 			tp
 		);
 
 		// bower.json & .bowerrc
 		this.fs.copyTpl(
-			this.templatePath('_bower.json'),
+			this.templatePath('_bower.json.ejs'),
 			this.destinationPath('bower.json'),
 			tp
 		);
@@ -164,7 +164,7 @@ module.exports = generators.Base.extend({
 
 		// gulpfile.js
 		this.fs.copyTpl(
-			this.templatePath('_gulpfile.js'),
+			this.templatePath('_gulpfile.js.ejs'),
 			this.destinationPath('gulpfile.js'),
 			tp
 		);
