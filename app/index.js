@@ -120,6 +120,17 @@ module.exports = generators.Base.extend({
 			this.destinationPath('package.json'),
 			tp
 		);
+
+		// bower.json & .bowerrc
+		this.fs.copyTpl(
+			this.templatePath('_bower.json'),
+			this.destinationPath('bower.json'),
+			tp
+		);
+		this.fs.copy(
+			this.templatePath('_.bowerrc'),
+			this.destinationPath('.bowerrc')
+		);
 	},
 
 	/*
