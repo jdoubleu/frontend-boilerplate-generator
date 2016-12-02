@@ -1,0 +1,23 @@
+{
+  "name": "frontend-boilerplate-generator",
+  "version": "1.0.0",
+  "description": "A yeoman generator for bootstrapping a project based on the frontend-boilerplate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/jdoubleu/frontend-boilerplate-generator.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "frontend-boilerplate"
+  ],
+  "author": "Joshua Westerheide <devjdoubleu.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/jdoubleu/frontend-boilerplate-generator/issues"
+  },
+  "homepage": "https://gitlab.com/jdoubleu/frontend-boilerplate-generator#README"
+}
