@@ -165,6 +165,12 @@ module.exports = generators.Base.extend({
 				this.destinationPath('.gitlab-ci.yml'),
 				tp
 			);
+
+		// .gitignore
+		this.fs.copy(
+			this.templatePath('static/_.gitignore'),
+			this.destinationPath('.gitignore')
+		);
 	},
 
 	/*
