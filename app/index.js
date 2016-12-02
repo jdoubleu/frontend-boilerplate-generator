@@ -145,6 +145,18 @@ module.exports = generators.Base.extend({
 				this.templatePath('static/_.editorconfig'),
 				this.destinationPath('.editorconfig')
 			);
+
+		// .sass-lint.yml & .eslintrc
+		if(tp.sasslinting)
+			this.fs.copy(
+				this.templatePath('static/_.sass-lint.yml'),
+				this.destinationPath('.sass-lint.yml')
+			);
+		if(tp.es6linting)
+			this.fs.copy(
+				this.templatePath('static/_.eslintrc'),
+				this.destinationPath('.eslintrc')
+			);
 	},
 
 	/*
