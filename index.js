@@ -84,6 +84,22 @@ module.exports = generators.Base.extend({
 		});
 	},
 
+	/**
+	 * Generates all files
+	 */
+	writing: function() {
+		// Store properties in an extra variable
+		let tp = this.props;
+		// Extend the extra variable with lodash functions
+		tp._ = _;
+		// Add all helper functions of this generator to extra variable
+		tp.s = {
+			getAuthorName: this._getAuthorName,
+			getAuthorMail: this._getAuthorMail,
+			uppercc: this._uppercc
+		};
+	},
+
 	/*
 	 * ---------------------- Helper functions ----------------------
 	 */
