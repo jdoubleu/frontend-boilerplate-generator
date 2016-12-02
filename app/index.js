@@ -42,13 +42,28 @@ module.exports = generators.Base.extend({
 				{
 					type: 'input',
 					name: 'author',
-					message: 'author'
+					message: 'author',
+					validate: function(input) {
+						if(input == "")
+							return "Please provide an author.";
+
+						let name = input.match(/^([^\(<]+)/),
+							mail = input.match(/<([^>]+)>/);
+						if(!name || !name[1].trim() || !mail || !mail[1].trim())
+							return "Please provide a valid format (e.g. John Doe <mail@jd.com>)";
+
+						return true;
+					}
 				},
 				{
 					type: 'input',
 					name: 'license',
 					message: 'license',
-					default: 'UNLICENSED'
+					default: 'Unlicense',
+					validate: function(input) {
+						let spdx = require('spdx-expression-validate');
+						return spdx(input) ? true : 'Please enter a valid SPDX license format'
+					}
 				},
 				{
 					type: 'confirm',
