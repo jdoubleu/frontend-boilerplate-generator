@@ -178,6 +178,10 @@ module.exports = generators.Base.extend({
 			this.destinationPath('README.md'),
 			tp
 		);
+
+		// theme's dist folders
+		this.fs.write('assets/dist/images/.gitkeep');
+		this.fs.write('assets/dist/fonts/.gitkeep');
 	},
 
 	/*
