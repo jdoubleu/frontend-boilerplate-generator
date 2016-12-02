@@ -72,13 +72,11 @@ module.exports = generators.Base.extend({
 					type: 'input',
 					name: 'author',
 					message: 'author',
-					validate: function(input) {
+					validate: (input) => {
 						if(input == "")
 							return "Please provide an author.";
 
-						let name = input.match(/^([^\(<]+)/),
-							mail = input.match(/<([^>]+)>/);
-						if(!name || !name[1].trim() || !mail || !mail[1].trim())
+						if(!this._getAuthorName(input) || !this._getAuthorMail(input))
 							return "Please provide a valid format (e.g. John Doe <mail@jd.com>)";
 
 						if(!this._getAuthorMail(input).includes('@'))
