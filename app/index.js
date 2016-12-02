@@ -209,6 +209,12 @@ module.exports = generators.Base.extend({
 			tp
 		);
 
+		// index.html
+		this.fs.copy(
+			this.templatePath('static/_index.html'),
+			this.destinationPath('index.html')
+		);
+
 		// theme's dist folders
 		this.fs.write('assets/dist/images/.gitkeep', '');
 		this.fs.write('assets/dist/fonts/.gitkeep', '');
