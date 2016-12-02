@@ -131,6 +131,13 @@ module.exports = generators.Base.extend({
 			this.templatePath('_.bowerrc'),
 			this.destinationPath('.bowerrc')
 		);
+
+		// gulpfile.js
+		this.fs.copyTpl(
+			this.templatePath('_gulpfile.js'),
+			this.destinationPath('gulpfile.js'),
+			tp
+		);
 	},
 
 	/*
