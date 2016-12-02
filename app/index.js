@@ -184,6 +184,16 @@ module.exports = generators.Base.extend({
 		this.fs.write('assets/dist/fonts/.gitkeep');
 	},
 
+	/**
+	 * Installation function
+	 */
+	install: function() {
+		// Install npm dependencies (this also compiles existing files on first run)
+		this.npmInstall();
+		// Install bower dependencies (this might be empty on first run)
+		this.bowerInstall();
+	},
+
 	/*
 	 * ---------------------- Helper functions ----------------------
 	 */
