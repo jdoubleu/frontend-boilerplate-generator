@@ -51,6 +51,20 @@ module.exports = generators.Base.extend({
 				},
 				{
 					type: 'input',
+					name: 'version',
+					message: 'version',
+					default: '0.1.0',
+					validate: (input) => {
+						const semver = require('semver');
+
+						if(!semver.valid(input))
+							return "Please provide a valid version. This has to be valid against node-semver.";
+
+						return true;
+					}
+				},
+				{
+					type: 'input',
 					name: 'desc',
 					message: 'description'
 				},
