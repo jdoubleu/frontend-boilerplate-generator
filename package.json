@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://gitlab.com/jdoubleu/frontend-boilerplate-generator/issues"
   },
-  "homepage": "https://gitlab.com/jdoubleu/frontend-boilerplate-generator#README"
+  "homepage": "https://gitlab.com/jdoubleu/frontend-boilerplate-generator#README",
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "semver": "^5.3.0",
+    "spdx-expression-validate": "^1.0.2",
+    "yeoman-generator": "^0.24.1"
+  }
 }
