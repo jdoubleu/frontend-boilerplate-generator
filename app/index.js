@@ -128,7 +128,7 @@ module.exports = generators.Base.extend({
 			tp
 		);
 		this.fs.copy(
-			this.templatePath('static/_.bowerrc.ejs'),
+			this.templatePath('static/_.bowerrc'),
 			this.destinationPath('.bowerrc')
 		);
 
