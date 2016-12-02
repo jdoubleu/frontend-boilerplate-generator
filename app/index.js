@@ -189,7 +189,7 @@ module.exports = generators.Base.extend({
 
 		// README.md
 		this.fs.copyTpl(
-			this.templatePath('_README.mds.ejs'),
+			this.templatePath('_README.md.ejs'),
 			this.destinationPath('README.md'),
 			tp
 		);
