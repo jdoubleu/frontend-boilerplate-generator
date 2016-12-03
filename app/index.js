@@ -209,6 +209,12 @@ module.exports = generators.Base.extend({
 			tp
 		);
 
+		// assets files
+		this.fs.copy(
+			this.templatePath('static/?(?(main|_settings).scss|main.js)'),
+			this.destinationPath('assets/src/')
+		);
+
 		// index.html
 		this.fs.copy(
 			this.templatePath('static/_index.html'),
